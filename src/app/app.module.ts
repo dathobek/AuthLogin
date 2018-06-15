@@ -4,11 +4,13 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import {FormsModule} from '@angular/forms';
+import { RoutingModule } from '../app/routing/routing.module'
 
 
 import { AppComponent } from './app.component';
 import { EmailComponent } from './email/email.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AuthService } from './Shared/auth.service';
 
 
 @NgModule({
@@ -22,8 +24,9 @@ import { ProfileComponent } from './profile/profile.component';
     AngularFireModule.initializeApp(environment.FirebaseConfig),
     FormsModule,
     AngularFireAuthModule,
+    RoutingModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
