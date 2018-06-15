@@ -7,11 +7,15 @@ import {FormsModule} from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
+import { EmailComponent } from './email/email.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmailComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
