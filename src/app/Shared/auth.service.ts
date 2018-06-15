@@ -67,6 +67,9 @@ export class AuthService {
     
   }
 
-
+// Mite need this code leter
+ private oAuthLogin(provider){
+   return this.afAuth.auth.signInWithPopup(provider);
+ }
 
 }
