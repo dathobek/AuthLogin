@@ -45,7 +45,27 @@ export class AuthService {
     })
   }
 
-  
+  //Some Codes For Facebook Login Trigger!!!
+  FbLogin(){
+    const provider = new firebase.auth.FacebookAuthProvider();
+    return this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider)
+    .then(value=>{
+      console.log('The given name is '+ value.additionalUserInfo.profile.given_name)
+      this.router.navigateByUrl('/profile')
+    })
+    .catch(err=>{
+      console.log('Something went Wrong '+ err)
+    })
+  }
+
+  //Some Code added for signout
+  LogOut(){
+    this.afAuth.auth.signOut()
+    .then(()=>{
+      this.router.navigate(['/']);
+    })
+    
+  }
 
 
 
