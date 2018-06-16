@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { EmailComponent } from './email/email.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthService } from './Shared/auth.service';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     EmailComponent,
-    ProfileComponent
+    ProfileComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
