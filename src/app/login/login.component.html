@@ -1,5 +1,12 @@
 <div class="form-container">
-	<button (click)="loginGoogle()" class="google">Login with Google</button>
-	<button routerLink="/email-login" class="email">Email</button>
-	<a routerLink="/signup" routerLinkActive="active" class="create-account-txt">No Account? <strong>Create one here</strong></a>
-</div>
+     <img src="assets/images/lock.svg" id="lock"> 
+  
+      <span class="error" *ngIf="error">{{ error }}</span>
+  
+    <button (click)="loginFb()" id="fb">Login With Facebook</button><br>
+    <button (click)="LoginG()" id="google">Login With Google</button>
+    <button routerLink="/login-email" id="email">Email</button>
+  
+    <a routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+  </div>
+  

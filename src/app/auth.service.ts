@@ -36,7 +36,7 @@ export class AuthService {
   // Some Codes For Google Login trigger!!
   googlelogin(){
     const provider = new firebase.auth.GoogleAuthProvider();
-    return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider)
+    return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
     .then(value=>{
       console.log('The Given Name is ' + value.additionalUserInfo.profile.given_name)
       this.router.navigateByUrl('/profile')
@@ -47,9 +47,9 @@ export class AuthService {
   }
 
   //Some Codes For Facebook Login Trigger!!!
-  FbLogin(){
+  FbLogin(){ 
     const provider = new firebase.auth.FacebookAuthProvider();
-    return this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider)
+    return this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
     .then(value=>{
       console.log('The given name is '+ value.additionalUserInfo.profile.given_name)
       this.router.navigateByUrl('/profile')

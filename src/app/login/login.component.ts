@@ -13,6 +13,10 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
  
+  loginfb(){
+    this.authService.FbLogin();
+  }
+
   LoginG(){
     this.authService.googlelogin();
   }
