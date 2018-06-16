@@ -5,6 +5,7 @@ import * as firebase from 'firebase/app';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/switchMap';
 
+
 @Injectable()
 export class AuthService {
 

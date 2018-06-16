@@ -10,8 +10,9 @@ import { RoutingModule } from '../app/routing/routing.module'
 import { AppComponent } from './app.component';
 import { EmailComponent } from './email/email.component';
 import { ProfileComponent } from './profile/profile.component';
-import { AuthService } from './Shared/auth.service';
+import { AuthService } from './auth.service';
 import { LoginComponent } from './login/login.component';
+import * as firestore from '@firebase/firestore-types';
 
 
 @NgModule({
