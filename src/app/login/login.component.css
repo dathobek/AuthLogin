@@ -5,20 +5,20 @@
 }
 
   #fb {
-   background:#3B5998 /*url('assets/images/facebook.svg') no-repeat 14px 6px;
+   background:#3B5998 url('assets/images/fb.png') no-repeat 14px 6px;
     background-size: 47px;
-    color:#fff; */
+    color:#fff; 
 } 
 
 #google {
     border: 1px solid #95989A;
-    background: rgb(163, 98, 98) /* url('assets/images/google.svg') no-repeat 25px;
-    background-size: 25px; */
+    background: rgb(163, 98, 98)  url('assets/images/g.png') no-repeat 25px;
+    background-size: 25px; 
 }
 
 #email {
-    background: #ECECEC /* url('assets/images/email.svg') no-repeat 25px;
-    background-size: 25px; */
+    background: #ECECEC  url('assets/images/mg.png') no-repeat 25px;
+    background-size: 25px; 
 }
 
 @media (max-width: 600px) {
