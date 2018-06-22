@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import {AngularFireAuth} from 'angularfire2/auth';
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/switchMap';
 
@@ -35,8 +35,9 @@ export class AuthService {
 
   // Some Codes For Google Login trigger!!
   googlelogin(){
-    const provider = new firebase.auth.GoogleAuthProvider();
-    return this.afAuth.auth.signInWithPopup(provider)
+    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+    //const provider = new firebase.auth.GoogleAuthProvider();
+    //return this.afAuth.auth.signInWithPopup(provider)
     .then(value=>{
       console.log('The Given Name is ' + value.additionalUserInfo.profile.given_name)
       this.router.navigateByUrl('/profile')
