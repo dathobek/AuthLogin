@@ -8,8 +8,10 @@ import 'rxjs/add/operator/switchMap';
 
 @Injectable()
 export class AuthService {
-
-  constructor(private afAuth: AngularFireAuth,private router: Router) { }
+   user: Observable<firebase.User>
+  constructor(public afAuth: AngularFireAuth,private router: Router) {
+    this.user = afAuth.authState;
+   }
 
   // Some codes for Login Trigger!!!
   login(email:string,password:string){

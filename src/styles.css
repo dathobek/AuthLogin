@@ -2,7 +2,7 @@
 body {
     background:#E2E4E6;
     padding-top:4em;
-    background: url(./assets/images/mg.png) no-repeat;
+    /* background: url(./assets/images/mg.png) no-repeat; */
 }
 
 .form-container {
@@ -20,6 +20,7 @@ button {
     cursor:pointer;
     margin-bottom:15px;
     font-size:1.3em;
+    border-radius: 50px;
 }
 
 .basic-btn {
